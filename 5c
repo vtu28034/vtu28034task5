@@ -1,0 +1,26 @@
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+def find_sequence(arr):
+    smallest = arr[0]
+    largest = arr[-1]
+    print("Sequence of integers:", smallest, "to", largest)
+
+# Step 1: Get the number of integers
+n = int(input("Enter the number of integers: "))
+
+# Step 2: Receive the integers
+integers = []
+print("Enter the integers:")
+for _ in range(n):
+    integers.append(int(input()))
+
+# Step 3: Sort the integers using bubble sort
+bubble_sort(integers)
+
+# Step 4: Print the start and end of sequence
+find_sequence(integers)
